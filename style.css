@@ -1,0 +1,331 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Broadway', sans-serif;
+    background-image: url("imagenes/fondo.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+
+/* ENCABEZADO */
+
+header {
+    background: #0b1f3a;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+
+/* MENÚ */
+
+nav {
+    margin-top: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: yellow;
+}
+
+
+/* SECCIONES */
+
+section {
+    padding: 40px;
+    text-align: center;
+}
+
+
+/* INICIO */
+
+#inicio {
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url("imagenes/fondo.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: white;
+    text-align: center;
+
+    padding: 180px 20px;
+}
+
+#inicio h2 {
+    color: white;
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+#inicio p {
+    color: white;
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+
+/* BOTÓN */
+
+button {
+    background: #1565c0;
+    color: white;
+    border: none;
+
+    padding: 15px 30px;
+
+    font-size: 18px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0d47a1;
+}
+
+
+/* PRODUCTOS */
+
+#productos {
+    background: white;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+
+    padding: 40px;
+}
+
+#productos h2 {
+    grid-column: 1 / -1;
+
+    text-align: center;
+
+    margin-bottom: 10px;
+
+    color: #0b1f3a;
+
+    font-size: 30px;
+}
+
+
+/* TARJETAS */
+
+.producto {
+    background: white;
+
+    border: 1px solid #ddd;
+
+    border-radius: 10px;
+
+    width: 100%;
+
+    max-width: 250px;
+
+    margin: 0 auto;
+
+    padding: 20px;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+
+    transition: transform 0.3s;
+}
+
+.producto:hover {
+    transform: translateY(-5px);
+}
+
+
+/* IMÁGENES */
+
+.producto img {
+    width: 100%;
+
+    height: 200px;
+
+    object-fit: cover;
+
+    border-radius: 8px;
+
+    margin-bottom: 10px;
+}
+
+
+/* NOMBRE DEL PRODUCTO */
+
+.producto h3 {
+    color: #0d47a1;
+
+    margin-bottom: 10px;
+
+    font-size: 19px;
+}
+
+
+/* PRECIO */
+
+.producto p {
+    font-size: 18px;
+
+    font-weight: bold;
+
+    color: #333;
+}
+
+
+/* OFERTAS */
+
+#ofertas {
+    background: #0b1f3a;
+
+    color: white;
+
+    padding: 60px 20px;
+}
+
+#ofertas h2 {
+    color: white;
+
+    margin-bottom: 15px;
+}
+
+#ofertas p {
+    color: white;
+
+    font-size: 18px;
+}
+
+
+/* CONTACTO */
+
+#contacto {
+    background: #e8f5e9;
+
+    padding: 50px 20px;
+}
+
+#contacto h2 {
+    color: #0b1f3a;
+
+    margin-bottom: 20px;
+}
+
+#contacto p {
+    margin: 10px;
+
+    font-size: 18px;
+}
+
+
+/* PIE DE PÁGINA */
+
+footer {
+    background: #0d47a1;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 20px;
+}
+
+
+/* ADAPTACIÓN PARA CELULAR */
+
+@media (max-width: 768px) {
+
+    nav a {
+        display: block;
+
+        margin: 10px 0;
+    }
+
+    #productos {
+        grid-template-columns: 1fr;
+
+        padding: 30px 20px;
+    }
+
+    #inicio {
+        padding: 120px 20px;
+    }
+
+    #inicio h2 {
+        font-size: 30px;
+    }
+
+    #inicio p {
+        font-size: 18px;
+    }
+}
+/* CARRUSEL DE OFERTAS */
+
+.carrusel {
+    position: relative;
+    width: 80%;
+    max-width: 600px;
+    margin: 30px auto;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.carrusel img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    display: block;
+}
+
+.carrusel button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+
+    border: none;
+    border-radius: 50%;
+
+    width: 45px;
+    height: 45px;
+
+    font-size: 24px;
+
+    cursor: pointer;
+}
+
+#anterior {
+    left: 15px;
+}
+
+#siguiente {
+    right: 15px;
+}
+
+.carrusel button:hover {
+    background: #1565c0;
+}
